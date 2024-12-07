@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <main>
+    <div class="big-wrapper light">
+      <img src="{{ url_for('static', filename='img/shape.png') }}" alt="" class="shape" />
+      <header>
+        <div class="container">
+          <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+            <h3>Brontide</h3>
+          </div>
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </header>
+      <div class="showcase-area">
+        <div class="container">
+          <div class="left">
+            <div class="big-title">
+              <h1>Results</h1>
+            </div>
+            <p class="text">
+              Cipher text: <strong>{{ last_input }}</strong>
+            </p>
+            <p class="text">
+              Predicted encryption algorithm: <strong>{{ cipher_text }}</strong>
+            </p>
+            <a href="{{ url_for('input_page') }}" class="btn">Back to Input</a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-area">
+        <div class="container">
+          <button class="toggle-btn">
+            <i class="fa fa-moon-o"></i>
+            <i class="fa fa-sun-o"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
